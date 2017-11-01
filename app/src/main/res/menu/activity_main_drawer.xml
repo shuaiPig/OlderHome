@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="个人账户" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_share"
+            android:title="关联老人" />
+        <item
+            android:id="@+id/nav_address"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="服务地址" />
+        <item
+            android:id="@+id/nav_listshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="订单详情" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="联系客服" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_loginout"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="退出当前账号" />
+        </menu>
+    </item>
+
+</menu>

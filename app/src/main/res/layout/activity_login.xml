@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <variable name="user" type="com.example.liubo.olderhome.entity.User"/>
+        <variable name="loginOnclick" type="android.view.View.OnClickListener"/>
+    </data>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_marginBottom="35dp"
+        android:text="Home  Care"
+        android:textSize="25dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:textColor="@color/deepRed"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+    <EditText
+        android:id="@+id/account"
+        android:textColor="@color/deepRed"
+        android:layout_below="@id/title_text"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/editor_button"
+        android:inputType="text"
+        android:hint="账号"
+        android:textColorHint="@color/deepRed"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/account"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="密码"
+        android:maxLength="16"
+        android:textColor="@color/deepRed"
+        android:background="@drawable/editor_button"
+        android:inputType="textPassword"
+        android:textColorHint="@color/deepRed"/>
+    <Button
+        android:id="@+id/login_button"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_below="@id/password"
+        android:background="@drawable/login_button"
+        android:text="登陆"
+        android:onClick="@{loginOnclick}"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <LinearLayout
+        android:id="@+id/login_account_operation"
+        android:layout_below="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/deepRed"
+            android:gravity="right"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:text="找回密码"/>
+        <TextView
+            android:textColor="@color/deepRed"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="|"/>
+        <TextView
+            android:textColor="@color/deepRed"
+            android:gravity="left"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:text="注册账号"/>
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>
