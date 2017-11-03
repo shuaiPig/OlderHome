@@ -6,23 +6,17 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
-
 import com.example.liubo.olderhome.R;
 
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener , View.OnClickListener {
 
@@ -54,12 +48,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //为主功能键设置点击事件
         LinearLayout clockView= (LinearLayout) findViewById(R.id.setClock);
         clockView.setOnClickListener(this);
-
-
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.vp_main);
-        viewPager.setAdapter(new MainPagerAdapter(getSupportFragmentManager()));
-        viewPager.setOffscreenPageLimit(2);
-
 
 
     }
