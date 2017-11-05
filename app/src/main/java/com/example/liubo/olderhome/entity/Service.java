@@ -11,9 +11,9 @@ public class Service {
 
     private String evaluation;
 
-    private Long coin;
+    private int coin;
 
-    public Service(Integer id, String context, String sername, String serviceTcol, String evaluation, Long coin) {
+    public Service(Integer id, String context, String sername, String serviceTcol, String evaluation, int coin) {
         this.id = id;
         this.context = context;
         this.sername = sername;
@@ -66,11 +66,11 @@ public class Service {
         this.evaluation = evaluation == null ? null : evaluation.trim();
     }
 
-    public Long getCoin() {
+    public int getCoin() {
         return coin;
     }
 
-    public void setCoin(Long coin) {
+    public void setCoin(int coin) {
         this.coin = coin;
     }
 }

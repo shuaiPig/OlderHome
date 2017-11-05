@@ -64,7 +64,10 @@ public class LoginActivity extends AppCompatActivity {
         binding.setLoginOnclick(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendRequest(loginname,p);
+                Intent intent=new Intent(context, MainActivity.class);
+                startActivity(intent);
+                finish();
+//                sendRequest(loginname,p);
 
             }
         });

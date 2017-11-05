@@ -10,19 +10,27 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import com.example.liubo.olderhome.R;
+import com.example.liubo.olderhome.entity.Service;
+
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener , View.OnClickListener {
 
     public static final String one="MainActivity";
+    public ArrayList<Service> services=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState){
+        Log.i(one,"在这里");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_all);
         //状态栏透明
@@ -48,10 +56,39 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //为主功能键设置点击事件
         LinearLayout clockView= (LinearLayout) findViewById(R.id.setClock);
         clockView.setOnClickListener(this);
-
+        initService();
+        Log.i(one,"在这里1");
+        RecyclerView recyclerView= (RecyclerView) findViewById(R.id.main_recycle_view);
+        Log.i(one,"在这里2");
+        LinearLayoutManager layoutManager= new LinearLayoutManager(this);
+        Log.i(one,"在这里3");
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        recyclerView.setLayoutManager(layoutManager);
+        Log.i(one,"在这里");
+        ListAdapter listAdapter=new ListAdapter(services);
+        recyclerView.setAdapter(listAdapter);
+        Log.i(one,"在这里");
+    }
+    public void initService(){
+        Service service0=new Service(1,"1","","","",R.drawable.three);
+        Service service1=new Service(1,"","1","","",R.drawable.three);
+        Service service2=new Service(1,"1","","1","",R.drawable.three);
+        Service service3=new Service(1,"1","","1","1",R.drawable.three);
+        Service service4=new Service(3,"","","123","",R.drawable.three);
+        Service service5=new Service(1,"1","","123","",R.drawable.three);
+        Service service6=new Service(1,"","","1","",R.drawable.three);
+        Service service7=new Service(1,"","","","",R.drawable.three);
+        services.add(service0);
+        services.add(service1);
+        services.add(service2);
+        services.add(service3);
+        services.add(service4);
+        services.add(service5);
+        services.add(service6);
+        services.add(service7);
+        Log.i(one,"111111");
 
     }
-
     @Override
     public void onClick(View view) {
         switch (view.getId()){
