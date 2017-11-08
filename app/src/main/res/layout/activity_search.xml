@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mSearchPlate"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/search_back_view"
+            android:background="@color/deepRed"
+            android:src="@drawable/left_arrow"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:textColor="@color/white"
+            android:background="@color/deepRed"
+            android:gravity="center|left"
+            android:paddingLeft="20dp"
+            android:text="OlderHome"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <SearchView
+        android:id="@+id/searchView1"
+        android:iconifiedByDefault="false"
+        android:background="@drawable/outline"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:queryHint="请输入"/>
+</LinearLayout>

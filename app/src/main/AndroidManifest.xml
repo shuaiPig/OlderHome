@@ -22,6 +22,9 @@
         <activity android:name=".controller.ClockActivity">
 
         </activity>
+        <activity android:name=".controller.SearchActivity">
+
+        </activity>
     </application>
 
 </manifest>

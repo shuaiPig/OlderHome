@@ -56,18 +56,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //为主功能键设置点击事件
         LinearLayout clockView= (LinearLayout) findViewById(R.id.setClock);
         clockView.setOnClickListener(this);
+        LinearLayout searchView= (LinearLayout) findViewById(R.id.search_button1);
+        searchView.setOnClickListener(this);
+
         initService();
-        Log.i(one,"在这里1");
         RecyclerView recyclerView= (RecyclerView) findViewById(R.id.main_recycle_view);
-        Log.i(one,"在这里2");
         LinearLayoutManager layoutManager= new LinearLayoutManager(this);
-        Log.i(one,"在这里3");
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(layoutManager);
-        Log.i(one,"在这里");
         ListAdapter listAdapter=new ListAdapter(services);
         recyclerView.setAdapter(listAdapter);
-        Log.i(one,"在这里");
     }
     public void initService(){
         Service service0=new Service(1,"1","","","",R.drawable.three);
@@ -86,7 +84,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         services.add(service5);
         services.add(service6);
         services.add(service7);
-        Log.i(one,"111111");
 
     }
     @Override
@@ -96,6 +93,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent=new Intent(this,ClockActivity.class);
                 startActivity(intent);
             break;
+            case R.id.search_button1:
+            Intent intent1=new Intent(this,SearchActivity.class);
+                startActivity(intent1);
+            break;
+
 
         }
     }

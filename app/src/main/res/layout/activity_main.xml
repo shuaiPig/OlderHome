@@ -53,7 +53,8 @@
                         android:layout_weight="12"
                         android:layout_width="match_parent"
                         android:layout_height="0dp">
-                        <RelativeLayout
+                        <LinearLayout
+                            android:id="@+id/search_button1"
                             android:background="@drawable/outline"
                             android:orientation="horizontal"
                             android:layout_height="0dp"
@@ -63,16 +64,12 @@
                             android:layout_width="match_parent"
                             >
                             <ImageView
+                                android:paddingLeft="20dp"
                                 android:layout_alignParentLeft="true"
                                 android:src="@drawable/search"
                                 android:layout_width="50dp"
                                 android:layout_height="match_parent" />
-                            <ImageView
-                                android:layout_alignParentRight="true"
-                                android:src="@drawable/scan"
-                                android:layout_width="50dp"
-                                android:layout_height="match_parent" />
-                        </RelativeLayout>
+                        </LinearLayout>
                         <LinearLayout
                             android:layout_height="0dp"
                             android:layout_weight="2"
