@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         clockView.setOnClickListener(this);
         LinearLayout searchView= (LinearLayout) findViewById(R.id.search_button1);
         searchView.setOnClickListener(this);
+        LinearLayout selectService= (LinearLayout) findViewById(R.id.service);
+        selectService.setOnClickListener(this);
 
         initService();
         RecyclerView recyclerView= (RecyclerView) findViewById(R.id.main_recycle_view);
@@ -68,37 +70,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         recyclerView.setAdapter(listAdapter);
     }
     public void initService(){
-        Service service0=new Service(1,"1","","","",R.drawable.three);
-        Service service1=new Service(1,"","1","","",R.drawable.three);
-        Service service2=new Service(1,"1","","1","",R.drawable.three);
-        Service service3=new Service(1,"1","","1","1",R.drawable.three);
-        Service service4=new Service(3,"","","123","",R.drawable.three);
-        Service service5=new Service(1,"1","","123","",R.drawable.three);
-        Service service6=new Service(1,"","","1","",R.drawable.three);
-        Service service7=new Service(1,"","","","",R.drawable.three);
+        Service service0=new Service(1,"60平米打扫","","","",R.drawable.three);
+        Service service1=new Service(1,"帮助康复练习","1","","",R.drawable.older_nurse);
+        Service service2=new Service(1,"自助清洁","","1","",R.drawable.cleaning);
+        Service service3=new Service(1,"90平米打扫","","1","1",R.drawable.house_image);
+        Service service4=new Service(3,"陪同就医","","123","",R.drawable.doctor);
+        Service service5=new Service(1,"100平米打扫","","123","",R.drawable.three);
         services.add(service0);
         services.add(service1);
         services.add(service2);
         services.add(service3);
         services.add(service4);
         services.add(service5);
-        services.add(service6);
-        services.add(service7);
 
     }
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.setClock:
-            Intent intent=new Intent(this,ClockActivity.class);
-                startActivity(intent);
-            break;
             case R.id.search_button1:
-            Intent intent1=new Intent(this,SearchActivity.class);
+                Intent intent1=new Intent(this,SearchActivity.class);
                 startActivity(intent1);
-            break;
-
-
+                break;
+            case R.id.service:
+                Intent intent2=new Intent(this,ServiceActivity.class);
+                startActivity(intent2);
+                break;
+            case R.id.setClock:
+                Intent intent=new Intent(this,AlarmActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 

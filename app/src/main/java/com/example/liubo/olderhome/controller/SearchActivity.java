@@ -1,19 +1,14 @@
 package com.example.liubo.olderhome.controller;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.SearchView;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
-
 import com.example.liubo.olderhome.R;
-
 import java.lang.reflect.Field;
 
 /**

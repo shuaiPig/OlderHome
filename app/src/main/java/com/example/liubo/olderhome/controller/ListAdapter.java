@@ -47,7 +47,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Service service=services.get(position);
-        holder.serviceInfo.setText(service.getContext()+"  "+service.getCoin());
+        holder.serviceInfo.setText(service.getContext());
         holder.serviceImage.setImageResource(service.getCoin());
 //        URL url;
 //        try {
